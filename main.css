@@ -1,0 +1,14 @@
+.container {
+    height: 480px;
+    width: 480px;
+    display: block;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.pixel {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-color: coral;
+}
