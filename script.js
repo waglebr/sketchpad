@@ -4,15 +4,15 @@ $(document).ready(function () {
         while (i < (x * y)) {
 
             $(".container").append("<" + tag + " class='pixel'></" + tag + ">");
-            i++
-        };
+            i++;
+        }
 
     };
 
     tagMaker("div", 16, 16);
 
-    /* $(".pixel").mouseenter(function () {
-         $("this").fadeTo("fast", 1);
-     });*/
+    $(".pixel").mouseenter(function () {
+        $(this).css("background-color", "white");
+    });
 
 });
