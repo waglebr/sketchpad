@@ -1,15 +1,29 @@
+body {
+    background-color: lightcoral;
+}
+
 .container {
-    height: 480px;
-    width: 480px;
+    height: 500px;
+    width: 500px;
     display: block;
     margin: auto;
-    border: 1px solid black;
+    border: 5px solid goldenrod;
+    background-color: lightblue;
+    border-radius: 10px 10px auto;
 }
 
 .pixel {
-    display: inline-block;
     float: right;
-    height: 30px;
-    width: 30px;
-    background-color: coral;
+}
+
+input {
+    margin: auto;
+    width: 510px;
+    display: block;
+    border: 5px solid goldenrod;
+    border-radius: 0 0 10px 10px;
+    color: white;
+    font-size: 2em;
+    font-weight: 600;
+    background-color: burlywood;
 }

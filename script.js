@@ -1,18 +1,35 @@
 $(document).ready(function () {
-    var tagMaker = function (tag, x, y) {
+    var grid = 50;
+    var tagMaker = function (tag, x) {
         var i = 0;
-        while (i < (x * y)) {
+        while (i < (x * x)) {
 
             $(".container").append("<" + tag + " class='pixel'></" + tag + ">");
             i++;
         }
 
+        $(".pixel").css({
+            "height": 500 / grid + "px",
+            "width": 500 / grid + "px"
+        });
     };
 
-    tagMaker("div", 16, 16);
+    var brush = function (tag) {
+        $(tag).mouseenter(function () {
+            $(this).css("background-color", "slateblue");
+        });
+    };
 
-    $(".pixel").mouseenter(function () {
-        $(this).css("background-color", "white");
-    });
+    tagMaker("div", grid);
+    brush(".pixel");
 
+    var reset = function () {
+        $("input").click(function () {
+            $(".pixel").remove();
+            grid = window.prompt("How many pixels in the new grid?", "50");
+            tagMaker("div", grid);
+            brush(".pixel");
+        });
+    };
+    reset();
 });
